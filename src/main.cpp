@@ -12,8 +12,8 @@ LiquidCrystal_I2C lcd(0x3F, 20, 4);
 #define trigger A2
 #define echo A3
 
-#define TRIGGER   2 //pino de trigger do sensor
-#define ECHO      3 //pino de echo do sensor
+// #define TRIGGER   2 //pino de trigger do sensor
+// #define ECHO      3 //pino de echo do sensor
 #define VEL_SOMu  0.000340 //velocidade do som para calculos
 #define M1F  5 //pino de tensão direta no motor 1
 #define M2F  6 //pino de tensão direta no motor 2
