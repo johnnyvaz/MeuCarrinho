@@ -3,6 +3,7 @@
 #include <AFMotor.h>    //Biblioteca do motor shield
 #include <Ultrasonic.h> //Bibloteca do sensor ultrassônico
 #include <LiquidCrystal_I2C.h>
+#include <PID_v2.h>
 
 LiquidCrystal_I2C lcd(0x3F, 20, 4);
 
@@ -10,6 +11,15 @@ LiquidCrystal_I2C lcd(0x3F, 20, 4);
 
 #define trigger A2
 #define echo A3
+
+#define TRIGGER   2 //pino de trigger do sensor
+#define ECHO      3 //pino de echo do sensor
+#define VEL_SOMu  0.000340 //velocidade do som para calculos
+#define M1F  5 //pino de tensão direta no motor 1
+#define M2F  6 //pino de tensão direta no motor 2
+#define M1R  9 //pino de tensão reversa no motor 1
+#define M2R  10 //pino de tensão reversa no motor 2
+#define TAM_FILTRO  10 //tamanho do vetor de filtro
 
 //********************Criação dos objetos********************
 
